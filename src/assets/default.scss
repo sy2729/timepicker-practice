@@ -1,0 +1,120 @@
+.flex {display: flex;}
+.flex-column {flex-direction: column;}
+.justify-center {justify-content: center;}
+.justify-start {justify-content: flex-start;}
+.justify-end {justify-content: flex-end;}
+.justify-space-around {justify-content: space-around;}
+.justify-space-between {justify-content: space-between;}
+.align-center {align-items: center;}
+.align-start {align-items: flex-start;}
+.align-end {align-items: flex-end;}
+.flex-auto {flex: auto;}
+.flex-1 {flex: 1;}
+.flex-2 {flex: 2;}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* FLOAT */
+.f-right {
+  float: right;
+}
+.f-left {
+  float: left;
+}
+
+/* POSITION */
+.relative {position: relative;}
+.absolute {position: absolute;}
+.sticky {position: sticky;}
+
+
+/* FULLBOX */
+.full {width: 100%; height: 100%;}
+
+/* CENTER IN ABSOLUTE */
+.ab-center {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+/* TEXT */
+.t-center {text-align: center;}
+.t-right {text-align: right;}
+
+/* Clear Fix */
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* SHAPE */
+.circle {
+  border-radius: 50%;
+}
+
+//  @code from codePen: https://codepen.io/raf187/pen/BvgGRQ
+.arrow{
+  position: relative;
+  span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #06A8FF;
+    border-right: 1px solid #06A8FF;
+    transform: rotate(45deg);
+    margin: -5px;
+    animation: animate 1s 1;
+  }
+  span:nth-child(2){
+    animation-delay: -0.2s;
+  }
+  span:nth-child(3){
+    animation-delay: -0.4s;
+  }
+
+  &.up {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-10px,-10px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(10px,10px);
+  }
+}
+
+/* cursor */
+.pointer {cursor: pointer;}
+
+@function pxWithVw($n) {
+  @return 100vw * $n / 320;
+}
+
+
+// General Setting
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  h1,h2,h3,h4,h5,h6,p,span {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;}
